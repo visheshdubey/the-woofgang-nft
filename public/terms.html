@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.0.0/js/all.js"
+        integrity="sha384-l+HksIGR+lyuyBo1+1zCBSRt6v4yklWu7RbG0Cv+jDLDD9WFcEIwZLHioVB4Wkau"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>The Woof Gang</title>
+</head>
+
+<body class="bg-black">
+
+    <!-- Navbar -->
+
+    <nav class="flex flex-col w-full fixed z-10 top-0">
+        <div id="alert" style="display: none;"
+            class="flex w-full justify-center px-4 md:px-16 2xl:px-24 py-2 2xl:py-4 font-bold text-neutral-50 bg-gradient-to-r  from-green-400 via-green-700 to-green-600  ">
+            Policy ID Copied!
+        </div>
+        <div
+            class="flex justify-between items-center w-full px-4 md:px-16  py-4 2xl:py-6 backdrop-blur-xl bg-black/80 ">
+            <div>
+                <img class="w-40 sm:w-40  2xl:w-48" src="img/lojo.svg" alt="The Woof Gang Logo" />
+            </div>
+            <button id="openMenu" class="flex sm:hidden justify-end ">
+                <img class="w-6" src="img/ham.svg" alt="" srcset="" />
+            </button>
+            <ul
+                class="hidden md:flex items-center gap-10 md:gap-6 lg:gap-10 text-sm md:text-xs text-gray-100 font-semibold tracking-wide">
+                <li class="hover:text-orange-300 ease-in-out duration-200 hover:border-b hover:border-orange-300"><a
+                        href="#story">STORY</a>
+                </li>
+                <li class="hover:text-orange-300 ease-in-out duration-200 hover:border-b border-orange-300"><a
+                        href="#roadmap">ROADMAP</a></li>
+                <li class="hover:text-orange-300 ease-in-out duration-200 hover:border-b border-orange-300"><a
+                        href="#FAQ"></a>FAQ</li>
+                <li class="flex gap-2">
+                    <a href="https://twitter.com/thewoofgangnft"
+                        class="px-3 py-2 bg-gray-50 hover:bg-orange-200 ease-in-out duration-200 border rounded">
+                        <svg class="w-4" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.6421 1.74372C13.1453 1.98856 12.6116 2.15399 12.0506 2.22877C12.6229 1.84761 13.062 1.2428 13.269 0.522838C12.7336 0.8762 12.1404 1.13295 11.5092 1.27059C11.0035 0.672388 10.2836 0.297852 9.48634 0.297852C7.95612 0.297852 6.71506 1.67821 6.71506 3.38149C6.71506 3.62236 6.74004 3.85661 6.78645 4.08292C4.48221 3.95389 2.44093 2.72639 1.07373 0.861642C0.835754 1.31823 0.698916 1.84761 0.698916 2.4114C0.698916 3.48075 1.18856 4.42504 1.93165 4.97758C1.47711 4.96103 1.04994 4.82273 0.676308 4.59179V4.63149C0.676308 6.12501 1.6312 7.37104 2.89964 7.65426C2.66642 7.7244 2.42189 7.76146 2.16963 7.76146C1.99115 7.76146 1.81683 7.74293 1.64786 7.7072C2.00067 8.93139 3.02398 9.8234 4.23709 9.84722C3.28814 10.6744 2.09289 11.1674 0.794703 11.1674C0.571001 11.1674 0.350275 11.1528 0.133118 11.1244C1.35991 11.9998 2.81634 12.5093 4.38107 12.5093C9.47979 12.5093 12.2671 7.81241 12.2671 3.73883C12.2671 3.60648 12.2642 3.47281 12.2588 3.34047C12.8002 2.90505 13.2702 2.3631 13.6409 1.74571L13.6421 1.74372Z"
+                                fill="#262626" />
+                        </svg>
+                    </a>
+                    <a href="/"
+                        class="px-3 py-2 bg-gray-50 hover:bg-orange-200 ease-in-out duration-200 border rounded">
+                        <svg class="w-4" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9956 1.30749C11.083 0.834725 10.1138 0.490163 9.10217 0.297852C8.97482 0.546257 8.83333 0.8828 8.73429 1.14723C7.6583 0.970943 6.59008 0.970943 5.52893 1.14723C5.42989 0.8828 5.28132 0.546257 5.16105 0.297852C4.14237 0.490163 3.17319 0.834725 2.26698 1.30749C0.43474 4.36846 -0.0604614 7.35731 0.187139 10.3061C1.40391 11.3077 2.57826 11.9167 3.73207 12.3174C4.01505 11.8847 4.26972 11.4199 4.48903 10.9311C4.07164 10.7549 3.67548 10.5385 3.29347 10.2821C3.39251 10.202 3.49156 10.1138 3.58352 10.0257C5.88974 11.2196 8.38767 11.2196 10.6656 10.0257C10.7646 10.1138 10.8566 10.202 10.9556 10.2821C10.5736 10.5385 10.1775 10.7549 9.76006 10.9311C9.97937 11.4199 10.2341 11.8847 10.517 12.3174C11.6701 11.9167 12.8515 11.3077 14.0619 10.3061C14.3661 6.89259 13.5802 3.92778 11.9956 1.30749ZM4.80736 8.48716C4.11408 8.48716 3.54813 7.77401 3.54813 6.9006C3.54813 6.02719 4.09993 5.314 4.80736 5.314C5.50771 5.314 6.08071 6.02719 6.06656 6.9006C6.06656 7.77401 5.50771 8.48716 4.80736 8.48716ZM9.4559 8.48716C8.76258 8.48716 8.19593 7.77401 8.19593 6.9006C8.19593 6.02719 8.74843 5.314 9.4559 5.314C10.1562 5.314 10.7292 6.02719 10.7151 6.9006C10.7151 7.77401 10.1633 8.48716 9.4559 8.48716Z"
+                                fill="#262626" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+
+    <aside
+        class="flex flex-col justify-between w-52 px-8 py-8 h-full fixed z-20 top-0 -right-52 ease-in-out duration-200 backdrop-blur-xl bg-black/80 text-sm font-bold text-orange-100 overflow-y-auto shadow-2xl ">
+        <ul class="flex flex-col gap-5">
+            <div class="flex justify-end">
+                <button id="closeMenu">
+                    <img class="w-6" src="img/back.svg" alt="" srcset="" />
+                </button>
+            </div>
+            <li class="py-1 hover:text-orange-300 ease-in-out duration-200 hover:border-b hover:border-orange-300"><a
+                    href="#story">STORY</a>
+            </li>
+            <li class="py-1 hover:text-orange-300 ease-in-out duration-200 hover:border-b border-orange-300"><a
+                    href="#roadmap">ROADMAP</a></li>
+            <li class="py-1 hover:text-orange-300 ease-in-out duration-200 hover:border-b border-orange-300"><a
+                    href="#FAQ"></a>FAQ</li>
+        </ul>
+        <div class="flex gap-3">
+            <a href="/" class="px-3 py-2 bg-gray-50 hover:bg-orange-200 ease-in-out duration-200 border rounded">
+                <svg class="w-4" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.6421 1.74372C13.1453 1.98856 12.6116 2.15399 12.0506 2.22877C12.6229 1.84761 13.062 1.2428 13.269 0.522838C12.7336 0.8762 12.1404 1.13295 11.5092 1.27059C11.0035 0.672388 10.2836 0.297852 9.48634 0.297852C7.95612 0.297852 6.71506 1.67821 6.71506 3.38149C6.71506 3.62236 6.74004 3.85661 6.78645 4.08292C4.48221 3.95389 2.44093 2.72639 1.07373 0.861642C0.835754 1.31823 0.698916 1.84761 0.698916 2.4114C0.698916 3.48075 1.18856 4.42504 1.93165 4.97758C1.47711 4.96103 1.04994 4.82273 0.676308 4.59179V4.63149C0.676308 6.12501 1.6312 7.37104 2.89964 7.65426C2.66642 7.7244 2.42189 7.76146 2.16963 7.76146C1.99115 7.76146 1.81683 7.74293 1.64786 7.7072C2.00067 8.93139 3.02398 9.8234 4.23709 9.84722C3.28814 10.6744 2.09289 11.1674 0.794703 11.1674C0.571001 11.1674 0.350275 11.1528 0.133118 11.1244C1.35991 11.9998 2.81634 12.5093 4.38107 12.5093C9.47979 12.5093 12.2671 7.81241 12.2671 3.73883C12.2671 3.60648 12.2642 3.47281 12.2588 3.34047C12.8002 2.90505 13.2702 2.3631 13.6409 1.74571L13.6421 1.74372Z"
+                        fill="#262626" />
+                </svg>
+            </a>
+            <a href="/" class="px-3 py-2 bg-gray-50 hover:bg-orange-200 ease-in-out duration-200 border rounded">
+                <svg class="w-4" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.9956 1.30749C11.083 0.834725 10.1138 0.490163 9.10217 0.297852C8.97482 0.546257 8.83333 0.8828 8.73429 1.14723C7.6583 0.970943 6.59008 0.970943 5.52893 1.14723C5.42989 0.8828 5.28132 0.546257 5.16105 0.297852C4.14237 0.490163 3.17319 0.834725 2.26698 1.30749C0.43474 4.36846 -0.0604614 7.35731 0.187139 10.3061C1.40391 11.3077 2.57826 11.9167 3.73207 12.3174C4.01505 11.8847 4.26972 11.4199 4.48903 10.9311C4.07164 10.7549 3.67548 10.5385 3.29347 10.2821C3.39251 10.202 3.49156 10.1138 3.58352 10.0257C5.88974 11.2196 8.38767 11.2196 10.6656 10.0257C10.7646 10.1138 10.8566 10.202 10.9556 10.2821C10.5736 10.5385 10.1775 10.7549 9.76006 10.9311C9.97937 11.4199 10.2341 11.8847 10.517 12.3174C11.6701 11.9167 12.8515 11.3077 14.0619 10.3061C14.3661 6.89259 13.5802 3.92778 11.9956 1.30749ZM4.80736 8.48716C4.11408 8.48716 3.54813 7.77401 3.54813 6.9006C3.54813 6.02719 4.09993 5.314 4.80736 5.314C5.50771 5.314 6.08071 6.02719 6.06656 6.9006C6.06656 7.77401 5.50771 8.48716 4.80736 8.48716ZM9.4559 8.48716C8.76258 8.48716 8.19593 7.77401 8.19593 6.9006C8.19593 6.02719 8.74843 5.314 9.4559 5.314C10.1562 5.314 10.7292 6.02719 10.7151 6.9006C10.7151 7.77401 10.1633 8.48716 9.4559 8.48716Z"
+                        fill="#262626" />
+                </svg>
+            </a>
+        </div>
+    </aside>
+
+
+    <!-- Team  -->
+
+    <section
+        class="flex flex-col items-center w-full px-4 sm:px-16 2xl:px-24 py-16 sm:py-24 bg-[url('/img/hero-blur.jpg')] bg-no-repeat bg-fixed bg-cover text-orange-100">
+        <h2 class="text-3xl font-bold ">TERMS AND CONDITIONS</h2>
+        <div class="flex flex-wrap items-center justify-around gap-2 text-justify w-full pt-8 sm:pt-16">
+            <!-- TeamMate 1 -->
+            <h3 class="font-bold">TERMS & CONDITIONS</h3>
+            <p>
+            
+            The Woof Gangs is a collection of digital artworks (NFTs) running on the Cardano Blockchain. This
+            website serves only as a platform for participants to trade digital collectibles. Users are solely
+            responsible for the security and management of their own private Cardano wallets, as well as validating
+            and approving all transactions generated by this website. This website and its related services are
+            provided "as is" and "as available," with no warranties expressed or implied. You accept sole
+            responsibility for any and all transactions involving The Woof Gangs digital collectibles by using this
+            website.</p>
+            <h3 class="font-bold">OWNERSHIP</h3>
+            <p>
+            You are the sole owner of the NFT. On the Cardano blockchain, each member of The Woof Gang is an NFT.
+            You own the underlying The Woof Gang, the Art, completely when you buy an NFT.
+            For personal use only. The Woof Gang project grants you a worldwide, royalty-free licence to use, copy,
+            and display the purchased Art, along with any extensions you choose to create or use, solely for the
+            following purposes, subject to your continued compliance with these Terms:
+            <ol class="list-decimal">
+                <li>for your own personal,
+                    non-commercial use; I for your own personal, non-commercial use;</li>
+                <li>as part of a marketplace that
+                    allows for the purchase and sale of your The Woof Gang / NFT, provided that the marketplace
+                    cryptographically verifies each The Woof Gang owner's rights to display the Art for their The Woof
+                    Gang
+                    to ensure that only the actual owner can display the Art;</li>
+                <li>as part of a third-party website or
+                    application that allows for the inclusion, involvement, or participation of your The Woof,and
+                    provided
+                    that once the owner of The Woof Gang leaves the website/application, the Art is no longer visible.
+                </li>
+            </ol>
+            Commercial Use is permitted. The Woof Gang project grants you an unlimited, worldwide licence to use,
+            copy, and display the purchased Art for the purpose of creating derivative works based on the Art
+            ("Commercial Use"), provided you continue to comply with these Terms. Use of the Art to produce and sell
+            merchandise products (Mugs, T-Shirts, etc.) displaying copies of the Art is an example of such
+            Commercial Use.Nothing in this Section will be construed to prevent you from I owning or operating a
+            marketplace that allows the use and sale of The Woof Gangs in general, provided that the marketplace
+            cryptographically verifies each The Woof Gang owner's right to display the Art for their The Woof Gang
+            to ensure that only the actual owner can display the Art; or (ii) owning or operating a marketplace that
+            allows the use and sale of The Woof Gangs in general, provided that the marketplace cryptographically
+            (ii) owning or operating a third-party website or application that allows for the inclusion,
+            involvement, or participation of The Woof Gangs in general, provided that the third-party website or
+            application cryptographically verifies each The Woof Gang owner's rights to display the Art for their
+            The Woof Gang to ensure that only the actual owner can display the Art, and provided that the
+            third-party website or application does not allow for the inclusion, involvement, or participation of
+            The Woof Gangs in general, and provided that Once the owner of the Purchased The Woof Gang leaves the
+            website/application, the art is no longer visible; or (iii) earning revenue from any of the foregoing.
+            </p>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer
+        class="flex flex-col gap-12 justify-between items-center w-full px-4 md:px-16 2xl:px-24 pt-20 pb-5 2xl:py-16 bg-black ">
+
+        <div class="w-full justify-between flex items-center ">
+            <div>
+                <img class="w-40 sm:w-40  2xl:w-48" src="img/lojo.png" alt="The Woof Gang Logo" />
+            </div>
+            <ul
+                class="flex items-center gap-10 md:gap-6 lg:gap-10 text-sm md:text-xs text-gray-100 font-semibold tracking-wide">
+
+                <li class="flex gap-2">
+                    <a href="/"
+                        class="px-3 py-2 bg-gray-50 hover:bg-orange-200 ease-in-out duration-200 border rounded">
+                        <svg class="w-4" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.6421 1.74372C13.1453 1.98856 12.6116 2.15399 12.0506 2.22877C12.6229 1.84761 13.062 1.2428 13.269 0.522838C12.7336 0.8762 12.1404 1.13295 11.5092 1.27059C11.0035 0.672388 10.2836 0.297852 9.48634 0.297852C7.95612 0.297852 6.71506 1.67821 6.71506 3.38149C6.71506 3.62236 6.74004 3.85661 6.78645 4.08292C4.48221 3.95389 2.44093 2.72639 1.07373 0.861642C0.835754 1.31823 0.698916 1.84761 0.698916 2.4114C0.698916 3.48075 1.18856 4.42504 1.93165 4.97758C1.47711 4.96103 1.04994 4.82273 0.676308 4.59179V4.63149C0.676308 6.12501 1.6312 7.37104 2.89964 7.65426C2.66642 7.7244 2.42189 7.76146 2.16963 7.76146C1.99115 7.76146 1.81683 7.74293 1.64786 7.7072C2.00067 8.93139 3.02398 9.8234 4.23709 9.84722C3.28814 10.6744 2.09289 11.1674 0.794703 11.1674C0.571001 11.1674 0.350275 11.1528 0.133118 11.1244C1.35991 11.9998 2.81634 12.5093 4.38107 12.5093C9.47979 12.5093 12.2671 7.81241 12.2671 3.73883C12.2671 3.60648 12.2642 3.47281 12.2588 3.34047C12.8002 2.90505 13.2702 2.3631 13.6409 1.74571L13.6421 1.74372Z"
+                                fill="#262626" />
+                        </svg>
+                    </a>
+                    <a href="/"
+                        class="px-3 py-2 bg-gray-50 hover:bg-orange-200 ease-in-out duration-200 border rounded">
+                        <svg class="w-4" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9956 1.30749C11.083 0.834725 10.1138 0.490163 9.10217 0.297852C8.97482 0.546257 8.83333 0.8828 8.73429 1.14723C7.6583 0.970943 6.59008 0.970943 5.52893 1.14723C5.42989 0.8828 5.28132 0.546257 5.16105 0.297852C4.14237 0.490163 3.17319 0.834725 2.26698 1.30749C0.43474 4.36846 -0.0604614 7.35731 0.187139 10.3061C1.40391 11.3077 2.57826 11.9167 3.73207 12.3174C4.01505 11.8847 4.26972 11.4199 4.48903 10.9311C4.07164 10.7549 3.67548 10.5385 3.29347 10.2821C3.39251 10.202 3.49156 10.1138 3.58352 10.0257C5.88974 11.2196 8.38767 11.2196 10.6656 10.0257C10.7646 10.1138 10.8566 10.202 10.9556 10.2821C10.5736 10.5385 10.1775 10.7549 9.76006 10.9311C9.97937 11.4199 10.2341 11.8847 10.517 12.3174C11.6701 11.9167 12.8515 11.3077 14.0619 10.3061C14.3661 6.89259 13.5802 3.92778 11.9956 1.30749ZM4.80736 8.48716C4.11408 8.48716 3.54813 7.77401 3.54813 6.9006C3.54813 6.02719 4.09993 5.314 4.80736 5.314C5.50771 5.314 6.08071 6.02719 6.06656 6.9006C6.06656 7.77401 5.50771 8.48716 4.80736 8.48716ZM9.4559 8.48716C8.76258 8.48716 8.19593 7.77401 8.19593 6.9006C8.19593 6.02719 8.74843 5.314 9.4559 5.314C10.1562 5.314 10.7292 6.02719 10.7151 6.9006C10.7151 7.77401 10.1633 8.48716 9.4559 8.48716Z"
+                                fill="#262626" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-wrap justify-between items-center gap-5 w-full text-orange-200">
+            <span class="w-full sm:w-6/12">
+                <span class=" text-sm sm:text-base font-bold">Policy ID :</span>
+                <p class="text-xs sm:text-sm" style="overflow-wrap:break-word;">
+                    974e98c4529f8fc75fa8baf5618f7b5ade81aa9ed29ce33cd1c2f2e70838180e <button
+                        class="px-1  ml-1 border border-neutral-600 hover:bg-neutral-100 text-neutral-400 hover:text-neutral-900 rounded-sm text-md font-bold ease-in-out duration-200"
+                        onclick="copyTextFun()"><i class="far fa-copy"></i></button>
+                </p>
+            </span>
+            <img class="w-32" src="img/cardano.png" alt="" srcset="">
+        </div>
+        <!-- <div class="flex  w-full "> </div> -->
+        <div
+            class="flex flex-wrap pt-5 text-xs sm:text-sm border-t text-neutral-400 border-neutral-800 justify-center sm:justify-between items-center w-full">
+            <span class="w-full sm:w-8/12 text-center sm:text-left"> © 2022 theWoofGang.com | All rights
+                reserved.</span>
+            <span class="underline">Terms and Conditions</span>
+        </div>
+
+    </footer>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

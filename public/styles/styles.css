@@ -1,0 +1,7 @@
+.faq li.a {
+    
+    display: none;
+}
+.faq li.q {
+    cursor: pointer;
+}
